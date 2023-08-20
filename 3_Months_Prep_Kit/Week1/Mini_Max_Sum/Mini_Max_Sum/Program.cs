@@ -2,9 +2,9 @@
 
 static void miniMaxSum(List<int> arr)
 {
-    int result = 0;
-    int minSum = 0;
-    int maxSum = 0;
+    long result = 0;
+    long minSum = 0;
+    long maxSum = 0;
     bool passedFirst = false;
     for (int i = 0; i < arr.Count; i++)
     {
@@ -32,11 +32,13 @@ static void miniMaxSum(List<int> arr)
         {
             maxSum = result;
         }
-        Console.WriteLine(i+". Result: " + result);
+      //  Console.WriteLine(i+". Result: " + result);
     }
 
-    Console.WriteLine("Max: " + maxSum);
-    Console.WriteLine("Min: " + minSum);
+    Console.WriteLine(minSum + " " + maxSum);
+
+    //Console.WriteLine("Max: " + maxSum);
+    //Console.WriteLine("Min: " + minSum);
 }
 
 List <int> arr = new List<int> { 1, 3, 6, 8, 10 };
