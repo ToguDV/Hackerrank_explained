@@ -33,5 +33,5 @@
 }
 
 
-Console.WriteLine(timeConversion("07:05:45PM"));
-Console.WriteLine(timeConversion("12:45:54PM"));
+//Console.WriteLine(timeConversion("07:05:45PM"));
+//Console.WriteLine(timeConversion("12:45:54PM"));
