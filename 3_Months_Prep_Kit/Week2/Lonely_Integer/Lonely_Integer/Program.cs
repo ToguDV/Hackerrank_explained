@@ -17,7 +17,7 @@
         if(unique)
         {
             uniqueValue = a[i];
-            
+            break;
         }
     }
     return uniqueValue;
