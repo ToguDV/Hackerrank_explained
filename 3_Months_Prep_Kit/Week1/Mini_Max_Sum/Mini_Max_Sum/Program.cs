@@ -2,43 +2,25 @@
 
 static void miniMaxSum(List<int> arr)
 {
-    long result = 0;
-    long minSum = 0;
-    long maxSum = 0;
-    bool passedFirst = false;
+    long min = arr[0];
+    long max = 0;
+    long sum = 0;
     for (int i = 0; i < arr.Count; i++)
     {
-        result = 0;
-        for (int j = 0; j < arr.Count; j++)
+        sum += arr[i];
+
+        if(arr[i] < min)
         {
-            if(i != j)
-            {
-                result = result + arr[j];
-            }
+            min = arr[i];
         }
 
-        if(!passedFirst)
+        if (arr[i] > max)
         {
-            passedFirst = true;
-            minSum = result;
+            max = arr[i];
         }
-
-        if(result < minSum)
-        {
-            minSum = result;
-        }
-
-        if (result > maxSum)
-        {
-            maxSum = result;
-        }
-      //  Console.WriteLine(i+". Result: " + result);
     }
 
-    Console.WriteLine(minSum + " " + maxSum);
-
-    //Console.WriteLine("Max: " + maxSum);
-    //Console.WriteLine("Min: " + minSum);
+    Console.WriteLine((sum - max) + " " + (sum - min));
 }
 
 List <int> arr = new List<int> { 1, 3, 6, 8, 10 };
